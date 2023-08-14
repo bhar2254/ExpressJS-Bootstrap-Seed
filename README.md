@@ -1,4 +1,4 @@
-# Phi Lambda Phi National Fraternity
-## Website Repository
+# ExpressJS Bootstrap
+## Seed Repository
 
-Any brothers who are interested in helping out with the website are welcome to mess with this repository. Let me (blaine, bhar2254) know if you do and I'll update the repository to the live version (currently hosted by a private repo on my account) and start hosting the site from this repository instead.
+This repository is a compilation of my preferred setup standards for building applications with Express.JS and Bootstrap. At the moment, this is me favorite method for developing quick and easy to deploy web applications. As I improve, likely I'll add new librarys and functions, or even completely scrap the project for alternative frameworks. Material UI has definitely drawn a lot of attention the last decade, so I may migrate over to MUI and React, but for the time being Bootstrap and Express is too quick and easy to pass up.

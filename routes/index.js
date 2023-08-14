@@ -22,7 +22,7 @@ const date_format = '%Y-%m-%d';
 
 //	This will be stored in SQL db later
 SITE_META = {
-	'title':'NEB-MySQL-CRUD',
+	'title':'ExpressJS Bootstrap Seed',
 	'subtitle':'For building websites as quick as you can.'
 }
 

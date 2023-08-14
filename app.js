@@ -5,9 +5,7 @@
 	by Blaine Harper
 
 	PURPOSE: Root application for parking registartion UI and API
-*/	
-
-require('./env');
+*/
 
 const fs = require('fs');
 const dotenv = require('dotenv');
@@ -23,14 +21,13 @@ const axios = require('axios');
 var favicon =	require('serve-favicon');
 var cors = require('cors');
 
-var api_version = 	"beta";
 var protocols = ['https://','http://'];
 var origins = [];
 
 var app = express();
 
 DEBUG = 	true;
-DB = 	require('./db/sql_connect');
+//	DB = 	require('./db/sql_connect');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

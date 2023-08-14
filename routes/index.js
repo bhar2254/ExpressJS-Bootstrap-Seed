@@ -22,8 +22,8 @@ const date_format = '%Y-%m-%d';
 
 //	This will be stored in SQL db later
 SITE_META = {
-	'title':'HarperGuitars.com',
-	'subtitle':'Handbuilt Guitars'
+	'title':'NEB-MySQL-CRUD',
+	'subtitle':'For building websites as quick as you can.'
 }
 
 function buildEnv(req, res, next) {

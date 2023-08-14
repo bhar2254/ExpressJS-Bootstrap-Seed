@@ -4,7 +4,6 @@
  */
 
 var express = require('express');
-require('../env');
 
 const authProvider = require('../auth/AuthProvider');
 const { REDIRECT_URI, POST_LOGOUT_REDIRECT_URI } = require('../authConfig');

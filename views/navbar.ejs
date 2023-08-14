@@ -7,7 +7,7 @@
 
 	PURPOSE: Main navigation
 -->
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <title><%- env.title %> | <%= title %></title>
 	
@@ -15,13 +15,53 @@
 	<link rel="stylesheet" href="/css/bootstrap.add.css?ver=<%= Math.floor(Date.now()/1000); %>"/>
 	<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/b-print-2.3.6/datatables.min.css"/>
 <body>
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
 	<div class="container-fluid">
 		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 			<a class="navbar-brand flex-row flex-wrap mx-auto" href="#"><%- env.title %></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			<ul class="navbar-nav mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link <% if(env.loc == "/") { %> active <% } %>" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link <% if(env.loc.substring(0,4) == "/abo") { %> active <% } %>" href="/about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Nav Link II</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Nav Link III</a>
+				</li>
+				<li class="nav-item dropdown">	
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Dropdown</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Dropdown I</a></li>
+						<li><a class="dropdown-item" href="#">Dropdown II</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Dropdown I - Split</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="navbar-nav flex-row flex-wrap mx-auto">
+				<li class="nav-item dropdown">	
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<i class="fa-solid fa-bell"></i></a>
+					<span class="position-absolute translate-middle badge rounded-pill bg-danger" style="font-size:.6rem; left:75%!important; top:15%!important;">3<span class="visually-hidden">unread messages</span></span>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Notification I</a></li>
+						<li><a class="dropdown-item" href="#">Notification II</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Notification I - Split</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Profile</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>

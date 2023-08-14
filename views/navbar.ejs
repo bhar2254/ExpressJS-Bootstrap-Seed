@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--	navbar.ejs
+
+	For Indian Hills Community College
+	Parking On Hills, https://parking.indianhils.edu
+	by Blaine Harper
+
+	PURPOSE: Main navigation
+-->
+<html>
+  <head>
+    <title><%- env.title %> | <%= title %></title>
+	
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/b-print-2.3.6/datatables.min.css"/>
+	
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/b-print-2.3.6/datatables.min.js"></script>
+	<script src="https://kit.fontawesome.com/5496aaa581.js" crossorigin="anonymous"></script>
+<body>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">Harper-Guitars.com</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div style='margin-left:-15%;' class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+			<ul class="navbar-nav mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link <% if(env.loc == "/") { %> active <% } %>" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link <% if(env.loc.substring(0,4) == "/abo") { %> active <% } %>" href="/about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link <% if(env.loc.substring(0,4) == "/blo") { %> active <% } %>" href="/blog">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link <% if(env.loc.substring(0,4) == "/pro") { %> active <% } %>" href="/projects">Projects</a>
+				</li>
+				<li class="nav-item dropdown">	
+					<a class="nav-link dropdown-toggle <% if(env.loc.substring(0,4) == "/sho") { %> active <% } %>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Shop</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="/shop/guitars">Guitars</a></li>
+						<li><a class="dropdown-item" href="/shop/amps">Amplifiers</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="/shop/custom">Custom Shop</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

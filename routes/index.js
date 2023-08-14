@@ -12,11 +12,11 @@ var express = require('express');
 var router = express.Router();
 const path = require('path');
 require('dotenv').config();
+var ENV = {};
 
 var fetch = require('../fetch');
 var { GRAPH_ME_ENDPOINT } = require('../authConfig');
 
-const min_admin = 2;
 const datetime_format = '%Y-%m-%dT%H:%i';
 const date_format = '%Y-%m-%d';
 
@@ -26,39 +26,29 @@ SITE_META = {
 	'subtitle':'Handbuilt Guitars'
 }
 
-var ENV = SITE_META;
+function buildEnv(req, res, next) {
+	ENV = SITE_META;
+	ENV.loc = req.originalUrl;
+	
+	next();
+}
 
 require('dotenv').config({ path: '.env.dev' });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-	ENV.loc = req.originalUrl;
-	res.render('index', { env: SITE_META,
+router.get('/', buildEnv, function(req, res, next) {
+	res.render('index', { env: ENV,
 		title: 'Index'});
 });
 
 /* GET home page. */
-router.get('/about', function(req, res, next) {
+router.get('/about', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
 	res.render('index', { env: ENV,
 		title: 'About'});
 });
 
-/* GET home page. */
-router.get('/blog', function(req, res, next) {
-	ENV.loc = req.originalUrl;
-	res.render('index', { env: ENV,
-		title: 'Blog'});
-});
-
-/* GET home page. */
-router.get('/projects', function(req, res, next) {
-	ENV.loc = req.originalUrl;
-	res.render('index', { env: ENV,
-		title: 'Projects'});
-});
-
-router.get('/status', function(req, res, next) {
+router.get('/status', buildEnv, function(req, res, next) {
 	res.send({'status':200});
 });
 

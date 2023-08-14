@@ -30,7 +30,7 @@ var origins = [];
 var app = express();
 
 DEBUG = 	true;
-//	DB = 	require('./db/sql_connect');
+DB = 	require('./db/sql_connect');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--	gallery.ejs
+
+	For BlaineHarper.com
+	ExpressJS-Bootstrap-Seed, https://ebs.blaineharper.com/
+	by Blaine Harper
+
+	PURPOSE: 
+-->
+<%- include("../base/navbar.ejs") %>
+	<div class="container-fluid">
+		<div style="padding-top:6rem!important;" class="container py-5 text-center">
+			<h1><%- title %></h1>
+		</div>
+	</div>
+	<% let center = true; %>
+	<% let left = true; %>
+	<div class="container">
+		<% for(i = 0; i < cards.length; i++) { %>
+			<div class="row py-5 d-flex <% if(center){ %>justify-content-center<% } %>">
+				<div class="col-8 <% if(!left && !center){ %>ms-auto<% } %>">
+					<div class="card">
+						<div class="card-header bg-black bg-gradient">
+							<%- cards[i].heading %>
+						</div>
+						<div class="card-body justify-content-left">
+							<p class="card-text"><%- cards[i].content %></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% if( center ) { center = false; } else { left = !left; center = true; } %>
+		<% } %>
+	</div>
+<%- include("../base/footer.ejs") %>

@@ -53,15 +53,15 @@ router.get('/gallery', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
 	res.render('base/gallery', { env: ENV,
 		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.',cards:[
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'},
-			{heading:'Sample',img:'/favicon.png',content:'This is a sample item'}
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'},
+			{heading:'Sample Item',img:'/favicon.png',content:'</p class="lead">This is a sample item with text and an optional price or button for more info.</p>'}
 		]}
 	);
 });

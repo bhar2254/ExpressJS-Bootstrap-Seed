@@ -44,7 +44,7 @@ router.get('/', buildEnv, function(req, res, next) {
 /* GET home page. */
 router.get('/about', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
-	res.render('about', { env: ENV,
+	res.render('about/about', { env: ENV,
 		title: 'About EBS', subtitle:'Express-Bootstrap-Seed is a project to make deploying brand new websites as painless as possible'});
 });
 

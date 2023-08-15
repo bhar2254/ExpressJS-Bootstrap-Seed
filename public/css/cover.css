@@ -7,6 +7,12 @@ body {
 }
 
 .cover {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
   padding: 0 1.5rem;
 }
 

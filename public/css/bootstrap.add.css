@@ -1,5 +1,5 @@
 
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
 	html,
 	body {
 		background-image: url("/res/purple.jpg");
@@ -10,15 +10,9 @@
 		background-repeat: no-repeat;
 		background-size: cover; 
 	}
-	.notificationBadge {
-		left:75%!important; 
-	}	
-	#navbarBrand {
-		display:block;
-	}
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
 	html,
 	body {
 		background-image: url("/res/purple.png");
@@ -28,11 +22,5 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover; 
-	}
-	.notificationBadge {
-		left:10%!important; 
-	}	
-	#navbarBrand {
-		display:none;
 	}
 }

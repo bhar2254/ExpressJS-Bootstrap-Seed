@@ -38,7 +38,7 @@ require('dotenv').config({ path: '.env.dev' });
 /* GET home page. */
 router.get('/', buildEnv, function(req, res, next) {
 	res.render('base/cover', { env: ENV,
-		title: 'Index'});
+		title: 'Welcome to BlaineHarper.com', subtitle: 'Feel free to take a look around and steal whatever you like'});
 });
 
 /* GET home page. */

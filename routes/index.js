@@ -54,7 +54,7 @@ router.get('/gallery', buildEnv, function(req, res, next) {
 	res.render('base/gallery', { env: ENV,
 		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.',cards:[
 			{heading:'Sample Item',img:'/favicon.png',content:'<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><p class="lead text-center text-success">$0.25</p>'},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="justify-content-center"><p class="lead text-center text-success">$0.25</p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center"><p class="lead text-center text-success">$0.25</p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
 			{heading:'Sample Item',img:'/favicon.png',content:'<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p>'},
 			{heading:'Sample Item',img:'/favicon.png',content:'<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p>'},
 			{heading:'Sample Item',img:'/favicon.png',content:'<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p>'},

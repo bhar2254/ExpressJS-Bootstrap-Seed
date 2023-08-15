@@ -15,6 +15,7 @@
 	}
 	.navbar-right {
 		margin-left:80%;
+		position:absolute;
 	}
 }
 

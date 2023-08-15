@@ -46,14 +46,14 @@ router.get('/', buildEnv, function(req, res, next) {
 /* GET about page. */
 router.get('/about', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
-	res.render('about/about', { env: ENV,
+	res.render('pages/about', { env: ENV,
 		title: 'About EBS', subtitle:'Express-Bootstrap-Seed is a project to make deploying brand new websites as painless as possible', cards:SAMPLE_CARDS });
 });
 
 /* GET gallery page. */
 router.get('/gallery', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
-	res.render('shop/gallery', { env: ENV,
+	res.render('pages/gallery', { env: ENV,
 		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.', cards:SAMPLE_CARDS }
 	);
 });

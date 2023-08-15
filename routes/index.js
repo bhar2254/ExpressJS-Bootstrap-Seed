@@ -6,7 +6,7 @@
 
 	PURPOSE: Root router for express server
 */	
-const SAMPLE_CARD = {heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p>`,footer:`<div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></p></div>`};
+const SAMPLE_CARD = {heading:'\'19 Taylor 110ce',img:'/favicon.png',content:``,footer:`<div class="text-center text-muted"><div>Price: <span class="text-success">$0.25</span></div><div><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div></div>`};
 const SAMPLE_CARDS = [SAMPLE_CARD,SAMPLE_CARD,SAMPLE_CARD,SAMPLE_CARD,SAMPLE_CARD,SAMPLE_CARD,SAMPLE_CARD,SAMPLE_CARD,SAMPLE_CARD];
 
 var fs = require('fs');

@@ -52,7 +52,8 @@ router.get('/about', buildEnv, function(req, res, next) {
 router.get('/gallery', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
 	res.render('base/gallery', { env: ENV,
-		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.',cards:[{heading:'Sample',img:'/favicon.png',content:'This is a sample item'}]);
+		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.',cards:[{heading:'Sample',img:'/favicon.png',content:'This is a sample item'}]}
+	);
 });
 
 router.get('/status', buildEnv, function(req, res, next) {

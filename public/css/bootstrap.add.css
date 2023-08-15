@@ -1,16 +1,26 @@
 
 @media only screen and (min-width: 900px) {
-	html,
-	body {
+	.background-div {
 		background-image: url("/res/purple.jpg");
 		height: 100%;
+		position: relative;
+		opacity: 0.65;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover; 
 	}
 }
 
 @media only screen and (max-width: 900px) {
-html,
-	body {
+	.background-div {
 		background-image: url("/res/purple.png");
 		height: 100%;
+		position: relative;
+		opacity: 0.65;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover; 
 	}
 }

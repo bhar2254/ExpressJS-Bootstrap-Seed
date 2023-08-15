@@ -13,6 +13,9 @@
 	.notificationBadge {
 		left:75%!important; 
 	}	
+	.navbarBrand {
+		display:block;
+	}
 }
 
 @media only screen and (max-width: 900px) {
@@ -29,4 +32,7 @@
 	.notificationBadge {
 		left:10%!important; 
 	}	
+	.navbarBrand {
+		display:none;
+	}
 }

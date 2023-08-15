@@ -5,6 +5,9 @@ body {
   background-color: #ccc;
   background-repeat: no-repeat;
 }
+
 @media only screen and (max-width: 900px) {
-	background-image: url("/res/purple.png");
+	body {
+		background-image: url("/res/purple.png");
+	}
 }

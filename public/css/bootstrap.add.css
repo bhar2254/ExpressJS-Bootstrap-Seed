@@ -4,8 +4,6 @@
 	body {
 		background-image: url("/res/purple.jpg");
 		height: 100%;
-		background-color: #ccc;
-		background-repeat: no-repeat;
 	}
 }
 
@@ -14,7 +12,5 @@ html,
 	body {
 		background-image: url("/res/purple.png");
 		height: 100%;
-		background-color: #ccc;
-		background-repeat: no-repeat;
 	}
 }

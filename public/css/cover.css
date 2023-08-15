@@ -7,13 +7,19 @@ body {
 }
 
 .cover {
+  padding: 0 1.5rem;
+}
+
+body {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  padding: 0 1.5rem;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 .cover .btn-lg {

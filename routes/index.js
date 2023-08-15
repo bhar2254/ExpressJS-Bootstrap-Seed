@@ -44,7 +44,7 @@ router.get('/', buildEnv, function(req, res, next) {
 /* GET home page. */
 router.get('/about', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
-	res.render('index', { env: ENV,
+	res.render('about', { env: ENV,
 		title: 'About'});
 });
 

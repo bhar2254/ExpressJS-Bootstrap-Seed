@@ -7,6 +7,19 @@
 	PURPOSE: Root router for express server
 */	
 
+const SAMPLE_CARDS = [
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
+			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`}
+			];
+
 var fs = require('fs');
 var express = require('express');
 var router = express.Router();
@@ -45,25 +58,14 @@ router.get('/', buildEnv, function(req, res, next) {
 router.get('/about', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
 	res.render('about/about', { env: ENV,
-		title: 'About EBS', subtitle:'Express-Bootstrap-Seed is a project to make deploying brand new websites as painless as possible'});
+		title: 'About EBS', subtitle:'Express-Bootstrap-Seed is a project to make deploying brand new websites as painless as possible', cards:SAMPLE_CARDS });
 });
 
 /* GET gallery page. */
 router.get('/gallery', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
 	res.render('shop/gallery', { env: ENV,
-		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.',cards:[
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`},
-			{heading:'Sample Item',img:'/favicon.png',content:`<p class="text-muted">This is a sample item with text and an optional price or button for more info.</p><div class="text-center text-muted"><p>Price: <span class="text-success">$0.25</span></p><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">More Details</button></div>`}
-		]}
+		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.', cards:SAMPLE_CARDS }
 	);
 });
 

@@ -35,17 +35,24 @@ function buildEnv(req, res, next) {
 
 require('dotenv').config({ path: '.env.dev' });
 
-/* GET home page. */
+/* GET cover page. */
 router.get('/', buildEnv, function(req, res, next) {
 	res.render('base/cover', { env: ENV,
 		title: 'Welcome to BlaineHarper.com', subtitle: 'Feel free to take a look around and steal whatever you like'});
 });
 
-/* GET home page. */
+/* GET about page. */
 router.get('/about', buildEnv, function(req, res, next) {
 	ENV.loc = req.originalUrl;
 	res.render('about/about', { env: ENV,
 		title: 'About EBS', subtitle:'Express-Bootstrap-Seed is a project to make deploying brand new websites as painless as possible'});
+});
+
+/* GET gallery page. */
+router.get('/gallery', buildEnv, function(req, res, next) {
+	ENV.loc = req.originalUrl;
+	res.render('base/gallery', { env: ENV,
+		title: 'Gallery', subtitle:'Khajit has wares, if you have the coin.',cards:[{heading:'Sample',img:'/favicon.png',content:'This is a sample item'}]);
 });
 
 router.get('/status', buildEnv, function(req, res, next) {

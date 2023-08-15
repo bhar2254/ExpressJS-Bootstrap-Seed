@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!--	index.ejs
+<!--	gallery.ejs
 
-	For Indian Hills Community College
-	Parking On Hills, https://parking.indianhils.edu
+	For BlaineHarper.com
+	ExpressJS Bootstrap Seed, https://ebs.blaineharper.com/gallery
 	by Blaine Harper
 
-	PURPOSE: Sample landing page. Currently unused
+	PURPOSE: 
 -->
 <%- include("../base/navbar.ejs") %>
 	<div class="container-fluid">
@@ -13,12 +13,10 @@
 			<h1><%- title %></h1>
 		</div>
 	</div>
-	<% let center = true; %>
-	<% let left = true; %>
 	<div class="container">
-		<% for(i = 0; i < cards.length; i++) { %>
-			<div class="row py-5 d-flex <% if(center){ %>justify-content-center<% } %>">
-				<div class="col-8 <% if(!left && !center){ %>ms-auto<% } %>">
+		<div class="row py-5 d-flex">
+			<% for(i = 0; i < cards.length; i++) { %>
+				<div class="col-8">
 					<div class="card">
 						<div class="card-header bg-black bg-gradient">
 							<%- cards[i].heading %>
@@ -28,8 +26,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<% if( center ) { center = false; } else { left = !left; center = true; } %>
-		<% } %>
+			<% } %>
+		</div>
 	</div>
 <%- include("../base/footer.ejs") %>

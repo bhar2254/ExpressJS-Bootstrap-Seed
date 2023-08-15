@@ -29,7 +29,7 @@
 	.hide-on-shrink {
 		display: none;
 	}
-	#navbarRight {
+	.navbar-right {
 		margin-left:80%;
 	}
 }

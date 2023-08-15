@@ -37,7 +37,7 @@ require('dotenv').config({ path: '.env.dev' });
 
 /* GET home page. */
 router.get('/', buildEnv, function(req, res, next) {
-	res.render('index', { env: ENV,
+	res.render('base/cover', { env: ENV,
 		title: 'Index'});
 });
 

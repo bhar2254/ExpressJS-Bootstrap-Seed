@@ -1,13 +1,4 @@
 
-html {
-    height: 100%
-}
-
-body {
-	background-image: url("/res/purple.png");
-	background-color: #ccc;
-}
-
 .cover {
   padding: 0 1.5rem;
 }

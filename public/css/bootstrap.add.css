@@ -10,6 +10,9 @@
 		background-repeat: no-repeat;
 		background-size: cover; 
 	}
+	.notificationBadge {
+		left:75%!important; 
+	}	
 	#navbarBrand {
 		display:block;
 	}
@@ -26,6 +29,9 @@
 		background-repeat: no-repeat;
 		background-size: cover; 
 	}
+	.notificationBadge {
+		left:10%!important; 
+	}	
 	#navbarBrand {
 		display:none;
 	}

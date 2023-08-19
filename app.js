@@ -80,8 +80,17 @@ app.use(session({
     }
 }));
 
-app.listen(process.env.PORT, () => {
-	console.log(`App listening on port ${process.env.PORT}`)
-});
+// Failsafe App.js relaunch
+if (cluster.isMaster) {
+	cluster.fork();
+	
+	cluster.on('exit', function(worker, code, signal) {
+		cluster.fork();
+	});
+} else {
+	app.listen(process.env.PORT, () => {
+		console.log(`App listening on port ${process.env.PORT}`)
+	});
+}
 
 module.exports = app;
